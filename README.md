@@ -62,6 +62,10 @@ This is an **unofficial, independent companion project** by SquareStair Media. I
 
 Use it only with software you own or are authorized to analyze. Do not run untrusted binaries or install untrusted integrations without appropriate precautions.
 
+## Development workflow
+
+Propose changes on a separate branch and open a pull request against `main`. The repository maintainer reviews and explicitly approves each PR before it is merged. Do not commit directly to `main` as part of the normal development workflow.
+
 ## License
 
 MIT. See [`LICENSE`](./LICENSE).
