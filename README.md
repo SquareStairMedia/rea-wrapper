@@ -32,7 +32,7 @@ The open-source [`skills` CLI](https://github.com/vercel-labs/skills) can instal
 npx skills add SquareStairMedia/rea-wrapper
 ```
 
-The CLI currently documents Node.js 22.20 or later as a requirement. By default, it installs to the current project; add `-g` to make the skill available across projects. Review the installer prompts and choose the agent you actually use. This repository's installation has **not yet been tested** in a live agent session.
+The CLI currently documents Node.js 22.20 or later as a requirement. By default, it installs to the current project; add `-g` to make the skill available across projects. Review the installer prompts and choose the agent you actually use.
 
 Once installed, invoke `rea-wrapper` using your agent's supported skill selection or invocation method. Exact syntax varies by agent; a slash command is not guaranteed in every client. If the skill is not detected, consult your agent's skill documentation and installation location.
 
