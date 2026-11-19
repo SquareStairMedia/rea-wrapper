@@ -22,17 +22,19 @@ One reusable agent skill: [`SKILL.md`](./SKILL.md). There is no Python, custom M
 
 This project does **not** automatically install REA or other tools, guarantee that software can be reconstructed, or replace the original REA project.
 
-## Install in Codex
+## Install in a compatible AI coding agent
 
-The open-source `skills` CLI supports installing a skill directly from a GitHub repository:
+REA Wrapper uses the agent-skill format and is intended for AI coding agents that support skills and can access REA. It is not tied to a particular agent or vendor.
+
+The open-source [`skills` CLI](https://github.com/vercel-labs/skills) can install skills from GitHub and lets you select a supported agent:
 
 ```sh
-npx skills add SquareStairMedia/rea-wrapper --skill rea-wrapper -g -a codex
+npx skills add SquareStairMedia/rea-wrapper
 ```
 
-The `-g` flag makes the skill available across projects. A repository-local installation is also possible by omitting `-g`. Review any installer prompts. This command is based on the CLI's documented syntax; it has not yet been tested against this repository.
+The CLI currently documents Node.js 22.20 or later as a requirement. By default, it installs to the current project; add `-g` to make the skill available across projects. Review the installer prompts and choose the agent you actually use. This repository's installation has **not yet been tested** in a live agent session.
 
-In Codex, invoke the installed `rea-wrapper` skill through the skill picker or by referencing `$rea-wrapper` in your request. If it does not appear immediately, restart Codex and confirm the skill installed successfully.
+Once installed, invoke `rea-wrapper` using your agent's supported skill selection or invocation method. Exact syntax varies by agent; a slash command is not guaranteed in every client. If the skill is not detected, consult your agent's skill documentation and installation location.
 
 **REA itself is a separate dependency.** If its MCP tools are not already connected, the skill directs the agent to [REA's official setup instructions](https://github.com/morluto/rea/blob/main/docs/getting-started/installation.md). Installing a skill by itself does not create a live MCP connection.
 
